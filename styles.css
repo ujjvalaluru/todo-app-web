@@ -1,0 +1,299 @@
+html, body, main{
+    width:100%;
+    height: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding: 0 0 0 0;
+    border: 0 0 0 0;
+    background-color:rgb(218, 222, 230);
+    overflow:auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.dark-blue{
+
+}
+nav{
+    width: 300px;
+    height: 100%;
+    position:absolute;
+    transform:translate(-300px,0);
+    transition: transform 0.3s ease;
+    background-color:gray;
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 5px 30px 0px rgba(0,0,0,0.75);
+opacity:1;
+}
+nav.open{
+    transform: translate(0,0);
+    opacity:1;
+}
+
+.nav-bar-open{
+        opacity:1;
+        transform: translate(0,0);
+
+    
+}
+@media screen and (min-width: 700px){
+    nav{
+        position: relative;
+        transform: translate(0,0);
+    }
+    body{
+        display: flex;
+        flex-flow: row nowrap;
+    }
+    main{
+        width:auto;
+        flex-grow: 1;
+    }
+.ham-button{
+    display: none;
+}
+.ham-button:hover{
+    background-color:  rgb(132, 180, 132);
+}
+.button:hover {
+    background: rgb(132, 180, 132);
+}
+}
+
+@media screen and (max-width: 400px){
+    .nav-bar-open{
+        position:relative;
+            transform: translate(300,0);
+    
+        
+    }
+    .button:hover {
+        background:#4CAF50;
+    }
+}
+
+.nav-item{
+     margin: 5px 3px 2px 3px;
+     border-bottom: 2px;
+     min-height:5px;
+     max-height: 5%;
+     background-color: azure;
+     border-radius: 10px 10px 10px 10px;
+     
+
+     z-index: 1;
+}
+section{
+    height:100%;
+}
+ .nav-item:hover{
+    background-color: beige;
+}
+/*.nav-item ~ a{
+    text-decoration: none;
+
+}
+.nav-item ~ a:hover{
+    text-decoration: underline;
+}
+a{
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+}
+a:hover{
+    text-decoration: underline;
+}
+.nav-button{
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    background:green;
+    padding: 5px 5px 5px 5px; 
+    border-radius: 10px 10px 10px 10px;
+    margin: 5px 5px 5px 5x;
+    border-style: none none none none;
+    outline:none;
+    -webkit-transition-duration: 0.9s; /* Safari *//*
+    transition-duration: 0.9s;
+}
+ .nav-button:after {
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    background: green;
+    padding: 5px 5px 5px 5px; 
+    border-radius: 10px 10px 10px 10px;
+    outline:none;
+    opacity: 0;
+    transition: all 0.9s
+} 
+.nav-button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+.nav-button:clicked{
+    text-decoration: underline;
+    text-align: center;
+    width: 100%;
+    background: blue;
+    text-decoration-color: white;
+    padding: 3px 3px 3px 3px;
+    transition: none;
+    
+}
+
+a:hover{
+    text-decoration: underline;
+    color: #90EE90;
+} */
+/****Nav bar buttons*** START***/
+.button {
+    position: relative;
+    background-color: #4CAF50;
+    border: none;
+    font-size: 15px;
+    color: #FFFFFF;
+    padding: 5px;
+    text-align: center;
+    -webkit-transition-duration: 0.9s; /* Safari */
+    transition-duration:0.9s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    width: 100%;
+    outline:none;
+    border-radius: 5px 5px 5px 5px;
+    min-height: 46 px;
+}
+
+.button:after {
+    content: "";
+    background: rgb(159, 223, 159);
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px!important;
+    margin-top: -120%;
+    opacity: 0;
+    
+    transition: all 1s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+
+/****Nav bar buttons*** END***/
+/*TITLE ON NAV BAR*/
+.title{
+    width:100%;
+    min-height:10%;
+    padding-top: 5px;
+    align-content: center;
+    text-align: center;
+    vertical-align: center;
+    background-color: green;
+    text-decoration-color: azure;
+    color:#FFFFFF;
+    text-decoration-style: wavy;
+    font-size: 3em;
+    font-style: Arial;
+    opacity:1;
+}
+/***main**/
+main{
+    flex-wrap: wrap;
+
+}
+/***HEADER IN MAIN CONTENT**/
+.header{
+    padding:5px 0px 0px 0px;
+    width:100%;
+    /* background-color: dodgerblue; */
+    background-color: #4CAF50;
+    min-height: 10%;
+    -webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.75);
+    display: flex;
+    
+}
+/******HAMBURGER BUTTON********/
+.ham-button{font-size: 3em;
+    font-style: Arial;
+    background-color: #4CAF50;
+    height:auto;
+    outline:none;
+    text-align: center;
+    vertical-align: center;
+    font-size: 2em;
+    font-style: Arial;
+    border:0px 0px 0px 0px;
+    border-style: none;
+    -webkit-transition-duration: 0.9s; /* Safari */
+    transition-duration:0.9s;
+    text-decoration-color: #FFFFFF;
+    color:#FFFFFF;
+    overflow: hidden;
+    
+    opacity:1;
+   
+    
+}
+
+
+-ham-button:active {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+/* .ham-button:hover{
+    background-color:  rgb(132, 180, 132);
+} */
+/****Header Text*****/
+.menu-header-text{
+    padding: 2.5 em;
+    
+    text-decoration-color: #FFFFFF;
+    vertical-align: center;
+    text-align: center;
+    align-content: center;
+    display: block;
+    height:auto;
+    color: #FFFFFF;
+    font-size: 2em;
+    
+    
+}
+/*****CREATING RIPPLE EFFECT ON HAMBURGER ICON***/
+.ripple{
+   width:100%;
+   height:100%;
+    border-radius: 50%;
+    background-color: rgb(255,255,255,0.7);
+    position: relative;
+    transform: scale(0);
+    animation: ripple 0.6s linear;
+    
+
+
+
+}
+@keyframes ripple{
+    to{
+        transform: scale(2.5);
+        opacity:0;
+    }
+}
+/*****CREATING RIPPLE EFFECT ON HAMBURGER ICON***/
